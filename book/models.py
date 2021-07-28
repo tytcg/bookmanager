@@ -14,6 +14,9 @@ class BookInfo(models.Model):
         db_table = "bookinfo"
         verbose_name = "书籍管理"
 
+    def __str__(self):
+        return self.name
+
 
 class PersonInfo(models.Model):
     GENDER_CHOICE = [
@@ -28,3 +31,4 @@ class PersonInfo(models.Model):
 
     class Meta:
         db_table = "personinfo"
+
