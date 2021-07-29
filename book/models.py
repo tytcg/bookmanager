@@ -32,3 +32,5 @@ class PersonInfo(models.Model):
     class Meta:
         db_table = "personinfo"
 
+    def __str__(self):
+        return self.name
