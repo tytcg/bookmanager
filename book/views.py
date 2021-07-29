@@ -163,11 +163,3 @@ PersonInfo.objects.filter(book__name__exact='天龙八部')
 # 查询图书阅读量大于30的所有人物
 PersonInfo.objects.filter(book__readcount__gt=30)
 
-
-#########################分页#########################
-# 暂时未写完
-from django.core.paginator import Paginator
-objects=['jzi', 'dha', 'zha', 'zji']
-Paginator = Paginator(objects, 2)
-pag = Paginator.page(1)
-print(pag)
