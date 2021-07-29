@@ -1,9 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
 # Create your views here.
 from book.models import BookInfo, PersonInfo
-
 
 def index(request):
     obj = BookInfo.objects.all()
@@ -146,3 +146,28 @@ book1.personinfo_set.all()
 
 person = PersonInfo.objects.get(id=1)
 person.book.name  # 通过外键得到了书籍表中的name字段
+
+#################关联过过滤查询####################
+# 基本语法
+# 查询1，条件n
+# 模型类名.objects.filter(personinfo__属性名__运算符=值)
+
+# 查询图书，要求图书的人物为"郭靖"
+BookInfo.objects.filter(personinfo__name__exact='郭靖')
+# 查询图书，要求人物的描述中包含'八'
+BookInfo.objects.filter(personinfo__description__contains='八')
+
+# 查询n 条件为1
+# 查询书名为"天龙八部"的所有人物
+PersonInfo.objects.filter(book__name__exact='天龙八部')
+# 查询图书阅读量大于30的所有人物
+PersonInfo.objects.filter(book__readcount__gt=30)
+
+
+#########################分页#########################
+# 暂时未写完
+from django.core.paginator import Paginator
+objects=['jzi', 'dha', 'zha', 'zji']
+Paginator = Paginator(objects, 2)
+pag = Paginator.page(1)
+print(pag)
