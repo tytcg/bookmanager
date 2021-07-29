@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from book.models import BookInfo
+from book.models import BookInfo, PersonInfo
 
 
 def index(request):
@@ -134,5 +134,15 @@ BookInfo.objects.aggregate(Sum('readcount'))  # 对readcount字段进行求和�
 BookInfo.objects.all().order_by('readcount')
 BookInfo.objects.all().order_by('-readcount')
 
+###################级联查询#######################
+# 在一对多的关系模型中
+# 系统会自动在一的模型中创建一个关联模型(小写)_set
+# 在一的模型中查询出对应的数据，通过该字段就可以查询出所有的关联模型中的数据。
+
 # 查询书籍为1的所有人物信息
+book1 = BookInfo.objects.get(id=1)
+book1.personinfo_set.all()
 # 查询人物为1的书籍信息
+
+person = PersonInfo.objects.get(id=1)
+person.book.name  # 通过外键得到了书籍表中的name字段

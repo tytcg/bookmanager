@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13cfd4ca-7b53-4238-9bb6-707e6c2676f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +90,7 @@
       <updated>1627472832350</updated>
       <workItem from="1627472839823" duration="5038000" />
       <workItem from="1627517832040" duration="12770000" />
-      <workItem from="1627541048358" duration="1595000" />
+      <workItem from="1627541048358" duration="3589000" />
     </task>
     <task id="LOCAL-00001" summary="数据库的增删改操作">
       <created>1627522571305</created>
@@ -131,9 +130,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1627480242056" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1627473665976">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1627543695195">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1627473665976" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1627543695195" />
   </component>
 </project>
